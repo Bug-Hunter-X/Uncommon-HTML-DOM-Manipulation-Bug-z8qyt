@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text is inside a div.
+  </div>
+
+  <script>
+    let myDiv = document.getElementById('myDiv');
+    if (myDiv) { // Check if the element exists before accessing it
+      myDiv.parentNode.removeChild(myDiv);
+      console.log("Div removed successfully");
+    } else {
+      console.log("Div element not found");
+    }
+  </script>
+</body>
+</html>
