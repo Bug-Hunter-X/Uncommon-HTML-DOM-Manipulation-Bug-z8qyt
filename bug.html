@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text is inside a div.
+  </div>
+
+  <script>
+    // Attempting to access a non-existent property of an element
+    // that's already been removed from the DOM
+    let myDiv = document.getElementById('myDiv');
+    myDiv.parentNode.removeChild(myDiv);
+    console.log(myDiv.textContent); // This will throw an error
+  </script>
+</body>
+</html>
